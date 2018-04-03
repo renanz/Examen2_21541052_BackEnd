@@ -1,7 +1,7 @@
 module Api::V1
     class TweetsController < ApplicationController
         def index
-            @tweets = Tweet.order("created_at DESC")
+            @tweets = Tweet.order("created_at ASC")
             render json: @tweets
         end
 
